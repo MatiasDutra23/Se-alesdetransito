@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#35b9ef">
+  <title>¡Jugamos y aprendemos!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky-decoration cloud cloud-one"></div>
+  <div class="sky-decoration cloud cloud-two"></div>
+  <div class="star-decoration star-one">✦</div>
+  <div class="star-decoration star-two">✦</div>
+
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="score-pill" aria-label="Puntaje actual">
+        <span class="score-icon">★</span>
+        <span>Puntaje:</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="progress-pill" aria-live="polite">
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <strong id="progress">Pregunta 1 de 5</strong>
+      </div>
+
+      <div class="top-actions">
+        <button id="sound-button" class="round-action" type="button" aria-pressed="false" title="Activar o desactivar sonidos">🔊</button>
+        <button id="reset-button" class="reset-button" type="button">↻ Reiniciar</button>
+      </div>
+    </header>
+
+    <section class="question-card" aria-labelledby="question-text">
+      <div class="mascot" aria-hidden="true">⭐</div>
+      <div class="question-content">
+        <div class="question-label">¡Vamos a pensar!</div>
+        <h1 id="question-text">Cargando pregunta...</h1>
+        <p id="question-help" class="question-help">Elegí una respuesta y luego tocá confirmar.</p>
+      </div>
+      <div class="sparkle sparkle-left" aria-hidden="true">✦</div>
+      <div class="sparkle sparkle-right" aria-hidden="true">✦</div>
+    </section>
+
+    <section id="answers" class="answers" aria-label="Opciones de respuesta"></section>
+
+    <button id="confirm-button" class="main-button confirm-button" type="button" disabled>
+      ✓ Confirmar respuesta
+    </button>
+
+    <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+
+    <button id="next-button" class="main-button next-button hidden" type="button">
+      Siguiente pregunta →
+    </button>
+
+    <section id="result-card" class="result-card hidden" aria-live="polite">
+      <div class="result-emoji">🏆</div>
+      <h2>¡Terminaste!</h2>
+      <p id="result-text"></p>
+      <button id="play-again-button" class="main-button confirm-button" type="button">Jugar nuevamente ↻</button>
+    </section>
+
+    <footer class="footer-note">Aprender también es jugar 💛</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
